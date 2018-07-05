@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" type="text/css" href="tictactoeStyle.css">
+</head>
+<body>
+    <div id="content">
+        <h1 id="header">TicTacToe</h1>
+        <div id="login">
+            <p id="info">Select your Avatar (X or O).</p>
+            <form id="avatar">
+                <label for="player1">Player1: </label>
+                <input type="text" id="player1">
+                <label for="player2">Player2: </label>
+                <input type="text" id="player2">
+                <input type="submit" id="submit" value="Start game">
+                <input type="reset" id="reset" value="Reset game">
+            </form>
+        </div>
+        <div id="playerTurn"></div>
+        <table id="grid"></table>
+        <div id="result"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="tictactoejavascript.js"></script>
+</body>
+</html>
