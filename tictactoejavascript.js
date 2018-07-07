@@ -1,5 +1,6 @@
 // setting variables for the game
-const submit = $('#avatar');
+const avatar = $('#avatar');
+const submit = $('#submit');
 const reset = $('#reset');
 const result = $('#result');
 const cell1 = $('#table1 #gameCell1');
@@ -11,16 +12,14 @@ const cell6 = $('#table2 #gameCell3');
 const cell7 = $('#table3 #gameCell1');
 const cell8 = $('#table3 #gameCell2');
 const cell9 = $('#table3 #gameCell3');
-let player1 = $('#player1').val();
-let player2 = $('#player2').val();
+let player1 = $('#player1').val().toUpperCase();
+let player2 = $('#player2').val().toUpperCase();
 let newPara;
 
-
-
-submit.submit(function(event){
+avatar.submit(function(event){
     event.preventDefault();
-    player1 = $('#player1').val();
-    player2 = $('#player2').val();
+    player1 = $('#player1').val().toUpperCase();
+    player2 = $('#player2').val().toUpperCase();          
     startGame();
 });
 
@@ -44,10 +43,10 @@ function startGame() {
     };
 
     // function for the form
-     function todo(){
+    function todo(){
         $('#info').children().remove();
-        $('#playerTurn').append('<p id=turnIndicator>Player ' +player1+' turn.</p>');
-        $('#submit').remove();
+        $('#playerTurn').append('<p id=turnIndicator>Player ' +player1+' turn.</p>'); 
+        submit.remove();
         makeGrid();
     }
 
@@ -74,21 +73,9 @@ function startGame() {
     }
 
     //selection of avatar condition statement
-    if ((player1==="x") && (player2==="o")) {
-        todo();
-    } else if ((player1==="o") && (player2==="x")) {
-        todo();
-    } else if ((player1==="X") && (player2==="O")) {
+    if ((player1==="X") && (player2==="O")) {
         todo();
     } else if ((player1==="O") && (player2==="X")) {
-        todo();
-    }else if ((player1==="x") && (player2==="O")) {
-        todo();
-    }else if ((player1==="O") && (player2==="x")) {
-        todo();
-    }else if ((player1==="X") && (player2==="o")) {
-        todo();
-    }else if ((player1==="o") && (player2==="X")) {
         todo();
     } else {
         $('#info').children().remove();
@@ -96,7 +83,7 @@ function startGame() {
     }
 
 
-// Table click response
+    // Table click response
     var turnCount = 1;
     $('td').click(function() {
         if (!($(this).attr('style'))){
