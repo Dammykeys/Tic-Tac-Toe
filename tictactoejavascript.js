@@ -46,7 +46,7 @@ function startGame() {
     function todo(){
         $('#info').children().remove();
         $('#playerTurn').append('<p id=turnIndicator>Player ' +player1+' turn.</p>'); 
-        submit.remove();
+        $('#submit').remove();
         makeGrid();
     }
 
