@@ -52,20 +52,29 @@ function startGame() {
 
     function winDetect(){
         if((cell1.children('p').text('X')) && (cell2.children('p').text('X')) && (cell3.children('p').text('X'))){
+            $('#finalResult').remove();
             result.append('<p id=finalResult>Player ' +player1+' wins</p>');
+            $('#finalResult').remove();
         } else if((cell4.click()) && (cell5.click()) && (cell6.click())) {
+            $('#finalResult').remove();
             result.append('<p id=finalResult>Player ' +player1+' wins</p>');
         } else if((cell7.click()) && (cell8.click()) && (cell9.click())) {
+            $('#finalResult').remove();
             result.append('<p id=finalResult>Player ' +player1+' wins</p>');
         } else if((cell1.click()) && (cell4.click()) && (cell7.click())) {
+            $('#finalResult').remove();
             result.append('<p id=finalResult>Player ' +player1+' wins</p>');
         } else if((cell2.click()) && (cell5.click()) && (cell8.click())) {
+            $('#finalResult').remove();
             result.append('<p id=finalResult>Player ' +player1+' wins</p>');
         } else if((cell3.click()) && (cell6.click()) && (cell9.click())) {
+            $('#finalResult').remove();
             result.append('<p id=finalResult>Player ' +player1+' wins</p>');
         } else if((cell1.click()) && (cell5.click()) && (cell9.click())) {
+            $('#finalResult').remove();
             result.append('<p id=finalResult>Player ' +player1+' wins</p>');
         } else if((cell3.click()) && (cell5.click()) && (cell7.click())) {
+            $('#finalResult').remove();
             result.append('<p id=finalResult>Player ' +player1+' wins</p>');
         } else {
             console.log("nothing!!!!!!!!!!!");
