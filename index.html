@@ -1,29 +1,29 @@
-<!Doctype html>
-<html>
-<head lang="en">
+<!DOCTYPE html>
+<html lang= "en">
+<head>
     <meta charset="utf-8">
     <title>TicTacToe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="tictactoeStyle.css">
 </head>
 <body>
-    <div id="content">
-        <h1 id="header">TicTacToe</h1>
-        <div id="login">
+    <!--remove #content div its redundant-->
+    <h1 id="header">TicTacToe</h1>
+        <section id="login">
             <p id="info">Select your Avatar (X or O).</p>
             <form id="avatar">
                 <label for="player1">Player1: </label>
-                <input type="text" id="player1">
+                <input type="text" id="player1" autofocus required pattern="(x|o|X|O)">
                 <label for="player2">Player2: </label>
-                <input type="text" id="player2">
+                <input type="text" id="player2" required pattern="(x|o|X|O)">
                 <input type="submit" id="submit" value="Start game">
                 <input type="reset" id="reset" value="Reset game">
             </form>
-        </div>
-        <div id="playerTurn"></div>
+        </section>
+        <h2 id="playerTurn"></h2>
         <table id="grid"></table>
         <div id="result"></div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--removed jquery I just couldn't read your code!-->
     <script src="tictactoejavascript.js"></script>
 </body>
 </html>

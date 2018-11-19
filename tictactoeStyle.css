@@ -6,6 +6,7 @@ body {
     min-width: 480px;
     margin: 0 auto;
 }
+
 #header{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 70px;
@@ -16,9 +17,11 @@ body {
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
 }
+
 #header:hover{
     letter-spacing: 10px;
 }
+
 #login{
     border: 1px solid grey;
     border-radius: 5px;
@@ -26,32 +29,25 @@ body {
     text-align: center;
     text-emphasis: none;
 }
-#info{
-    margin: 20px;
 
-}
 #avatar{
     margin: 20px;
 }
+
 input[type=text]{
     width: 6rem;
     -moz-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
-
+    text-transform: lowercase;
 }
+
 input[type=text]:focus{
     width: 12rem;
 }
-#display{
-    font-weight: bold;
-    text-align: center;
-    font-style: italic;
-    color: red;
 
-}
-#turnIndicator{
+#playerTurn{
     color: #ff6449;
     text-align: center;
     -moz-transition: 0.5s ease-in-out;
@@ -59,14 +55,17 @@ input[type=text]:focus{
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
 }
-#turnIndicator:hover{
+
+#playerTurn:hover{
     letter-spacing: 20px;
 
 }
+
 #grid, td, tr{
     border: 8px solid black;
     cursor: pointer;
 }
+
 #grid {
     border-collapse: collapse;
     margin: 40px auto;
@@ -79,8 +78,6 @@ tr {
 td {
     height: 160px;
     width: 160px;
-}
-.gameAvatar{
     text-align: center;
     color: #ff6449;
     font-family: cursive;
@@ -88,4 +85,5 @@ td {
     font-size: 105px;
     margin-top: 6px;
     margin-bottom: 6px;
+    text-transform: uppercase;
 }
