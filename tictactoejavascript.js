@@ -108,7 +108,8 @@
 
             //incharge of updating the ui of the #tbody(game interface)
             updateMain (config){
-                if(config.evt.target.textContent !== '')
+                if(config.evt.target.textContent !== '' || config.
+                    evt.target.tagName !== 'TD')
                     return;
                 this.player1 = (this.player1 || 'y');
                 config.evt.target.style.backgroundColor = 
