@@ -28,7 +28,7 @@ reset.click(function(){
     $('#turnIndicator').remove();
     $('tr').remove();
     $('#player1').focus();
-    $("<input type='submit' id='submit' value='Start game'>").insertBefore($(this));
+    //$("<input type='submit' id='submit' value='Start game'>").insertBefore($(this));
 });
 
 function startGame() {
